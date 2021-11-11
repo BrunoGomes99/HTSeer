@@ -21,6 +21,8 @@ import { mainListItems, secondaryListItems } from './ListItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import TreeChart from './TreeChart';
+import LineChart  from './LineChart';
 
 
 function Copyright(props) {
@@ -171,7 +173,8 @@ function DashboardContent() {
                     height: 240,
                   }}
                 >
-                  <Chart />
+                  {/* <Chart /> */}
+                  <TreeChart />
                   
                 </Paper>
               </Grid>
@@ -186,6 +189,18 @@ function DashboardContent() {
                   }}
                 >
                   <Deposits />
+                </Paper>
+              </Grid>
+              <Grid item xs={12}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 240,
+                  }}
+                >
+                  <LineChart />
                 </Paper>
               </Grid>
               {/* Recent Orders */}
