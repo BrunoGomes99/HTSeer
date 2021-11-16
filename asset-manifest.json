@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/HTSeer/static/css/main.5739ad41.chunk.css",
-    "main.js": "/HTSeer/static/js/main.0de594c7.chunk.js",
-    "main.js.map": "/HTSeer/static/js/main.0de594c7.chunk.js.map",
-    "runtime-main.js": "/HTSeer/static/js/runtime-main.04263e83.js",
-    "runtime-main.js.map": "/HTSeer/static/js/runtime-main.04263e83.js.map",
-    "static/js/2.a26f0f90.chunk.js": "/HTSeer/static/js/2.a26f0f90.chunk.js",
-    "static/js/2.a26f0f90.chunk.js.map": "/HTSeer/static/js/2.a26f0f90.chunk.js.map",
-    "index.html": "/HTSeer/index.html",
-    "static/css/main.5739ad41.chunk.css.map": "/HTSeer/static/css/main.5739ad41.chunk.css.map",
-    "static/js/2.a26f0f90.chunk.js.LICENSE.txt": "/HTSeer/static/js/2.a26f0f90.chunk.js.LICENSE.txt"
+    "main.css": "/htseer/static/css/main.5739ad41.chunk.css",
+    "main.js": "/htseer/static/js/main.c7fe8f94.chunk.js",
+    "main.js.map": "/htseer/static/js/main.c7fe8f94.chunk.js.map",
+    "runtime-main.js": "/htseer/static/js/runtime-main.6740557a.js",
+    "runtime-main.js.map": "/htseer/static/js/runtime-main.6740557a.js.map",
+    "static/js/2.124510aa.chunk.js": "/htseer/static/js/2.124510aa.chunk.js",
+    "static/js/2.124510aa.chunk.js.map": "/htseer/static/js/2.124510aa.chunk.js.map",
+    "index.html": "/htseer/index.html",
+    "static/css/main.5739ad41.chunk.css.map": "/htseer/static/css/main.5739ad41.chunk.css.map",
+    "static/js/2.124510aa.chunk.js.LICENSE.txt": "/htseer/static/js/2.124510aa.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.04263e83.js",
-    "static/js/2.a26f0f90.chunk.js",
+    "static/js/runtime-main.6740557a.js",
+    "static/js/2.124510aa.chunk.js",
     "static/css/main.5739ad41.chunk.css",
-    "static/js/main.0de594c7.chunk.js"
+    "static/js/main.c7fe8f94.chunk.js"
   ]
 }
