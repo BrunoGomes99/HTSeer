@@ -1,0 +1,32 @@
+{
+    "name": "states",
+    "children": [
+        {
+            "name": "CA",
+            "children": [
+                {
+                    "name": "CA_1",
+                    "children": [
+                        { "name": "CA_1_HOBBIES",
+                           "children": [
+                               { "name": "HB1"},
+                               { "name": "HB2"}
+                           ] 
+                        },
+                        { "name": "CA_1_HOUSEHOLD" },
+                        { "name": "CA_1_FOODS" }
+                    ]
+                },
+                { "name": "CA_2" },
+                { "name": "CA_3" },
+                { "name": "CA_4" }
+            ]
+        },
+        {
+            "name": "TX",
+            "children": [
+                { "name": "TX_1" }, { "name": "TX_2" }, { "name": "TX_3" }
+            ]
+        }
+    ]
+}
