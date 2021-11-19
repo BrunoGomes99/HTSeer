@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import ReactEcharts from 'echarts-for-react';
-//import data from './data/states_hierarchy.json'
-//import data from './data/states.json'
-import data from './data/walmart.json'
 
 class TreeChart extends Component {
     render() {
@@ -16,7 +13,35 @@ class TreeChart extends Component {
                     series: [
                         {
                             type: 'tree',
-                            data: [data],
+                            data: [
+                                {
+                                    name: "states",
+                                    children: [
+                                        {
+                                            name: "CA",
+                                            children: [
+                                                {
+                                                    name: "CA_1",
+                                                    children: [
+                                                        { name: "CA_1_HOBBIES" },
+                                                        { name: "CA_1_HOUSEHOLD" },
+                                                        { name: "CA_1_FOODS" }
+                                                    ]
+                                                },
+                                                { name: "CA_2" },
+                                                { name: "CA_3" },
+                                                { name: "CA_4" }
+                                            ]
+                                        },
+                                        {
+                                            name: "TX",
+                                            children: [
+                                                { name: "TX_1" }, { name: "TX_2" }, { name: "TX_3" }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
                             top: '1%',
                             left: '7%',
                             bottom: '1%',
