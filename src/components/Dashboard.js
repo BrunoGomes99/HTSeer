@@ -26,7 +26,7 @@ import LineChart  from './LineChart';
 import Actions from './Actions';
 import {Button, Stack} from '@mui/material';
 import { BrowserRouter as Router } from "react-router-dom";
-import InputData from '../pages/inputData';
+// import InputData from '../pages/inputData';
 
 
 function Copyright(props) {
@@ -171,8 +171,8 @@ function DashboardContent() {
             
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>  
           {/* <Router> */}
-            <InputData />
-            {/* <Grid container spacing={3}>
+            {/* <InputData /> */}
+            <Grid container spacing={3}>
               <Grid item xs={12} md={5} lg={4}>
                 <Actions />
               </Grid>
@@ -186,7 +186,7 @@ function DashboardContent() {
                   }}
                 >
                   <TreeChart />
-                </Paper> */}
+                </Paper>
                  {/* <Paper
                   sx={{
                     p: 2,
@@ -206,7 +206,7 @@ function DashboardContent() {
                     Executar
                   </Button>
                  </Paper> */}
-              {/* </Grid> */}
+              </Grid>
               {/* </Router> */}
               {/* Recent Deposits */}
               {/* <Grid item xs={12} md={4} lg={3}>
@@ -239,7 +239,7 @@ function DashboardContent() {
                   <Orders />
                 </Paper>
               </Grid> */}
-            {/* </Grid> */}
+            </Grid>
             <Copyright sx={{ pt: 4 }} />
           </Container>
 

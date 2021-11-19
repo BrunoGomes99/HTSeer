@@ -37,16 +37,18 @@ function ListItemLink(props) {
 export const mainListItems = (
   <div>
     <ListItem button>
-      {/* <ListItemIcon>
+      <ListItemIcon>
         <HomeIcon />
-      </ListItemIcon> */}
-      <ListItemLink to="/home" primary="Home" icon={<HomeIcon />}/>
+      </ListItemIcon>
+      {/* <ListItemLink to="/home" primary="Home" icon={<HomeIcon />}/> */}
+      <ListItemText primary="Home" />
     </ListItem>
-    <ListItem >
-      {/* <ListItemIcon>
+    <ListItem button>
+      <ListItemIcon>
         <AddCircleOutlineIcon />
-      </ListItemIcon> */}
-      <ListItemLink to="/inputData" primary="Novo modelo preditivo" icon={<AddCircleOutlineIcon />}/>
+      </ListItemIcon>
+      {/* <ListItemLink to="/inputData" primary="Novo modelo preditivo" icon={<AddCircleOutlineIcon />}/> */}
+      <ListItemText primary="Novo modelo preditivo" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
