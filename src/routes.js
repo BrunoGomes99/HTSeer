@@ -9,6 +9,7 @@ const RoutesHtseer = () => {
    return(
        <Routes>
           <Route element={ <Home/>} path = "/" />
+          <Route element={ <Home/>} path = "/HTSeer" />
           <Route element = { <Home /> }  path="home" />
           <Route element = { <InputData /> }  path="inputData" />
           <Route element = { <Modeling /> }  path="modeling" />
