@@ -1,8 +1,13 @@
 import * as React from 'react';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import { Button, Slider, Select, MenuItem, FormControl, InputLabel, FormHelperText, Typography, Paper } from '@mui/material';
+import { Button, Slider, Select, MenuItem, FormControl, InputLabel, TextField, Typography, Paper, Container, Grid} from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import OutlinedInput from '@mui/material/OutlinedInput';
+import DatePicker from '@mui/lab/DatePicker';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import DateFnsUtils from "@date-io/date-fns";
+import { ptBR } from "date-fns/locale";
 
 
 import ListItemText from '@mui/material/ListItemText';
@@ -12,8 +17,23 @@ import DropDown from './DropDown';
 
 const useStyles = makeStyles((theme) => ({
     labelSliders: {
-        marginTop: "15px"
+        marginTop: "15px",
+        width: "300px",
+        alignSelf: "center"
     },
+    sliders:{
+        width: "300px",
+        alignSelf: "center"
+    },
+    button:{
+        width: "300px",
+        alignSelf: "center"
+    },
+    datePicker:{
+        marginTop: "15px",
+        alignSelf: "center",
+        width: "300px"
+    }
 }));
 
 function valuetext(value) {
@@ -59,15 +79,18 @@ const reconciliation = [
 function ActionsContent() {
     const classes = useStyles();
 
-    const [value, setValue] = React.useState([2011, 2012]);
+
     const [valuePercent, setValuePercent] = React.useState(80);
     const [valueForecast, setValueForecast] = React.useState(28);
     const [age, setAge] = React.useState('');
 
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-        console.log(newValue);
-    };
+    // const [value, setValue] = React.useState([2011, 2012]);
+    // const handleChange = (event, newValue) => {
+    //     setValue(newValue);
+    //     console.log(newValue);
+    // };
+
+    const [value, setValue] = React.useState(new Date('2010-01-02'));
 
     const handleChangePercent = (event, newValue) => {
         setValuePercent(newValue)
@@ -123,13 +146,13 @@ function ActionsContent() {
                 flexDirection: 'column',
             }}
         >
-            <Button variant="outlined" size="small" startIcon={<FileDownloadIcon />} padding="10px">
+            <Button variant="outlined" size="small" startIcon={<FileDownloadIcon />} className={classes.button} >
                 Importação dos dados
             </Button>
-            <Typography variant="subtitle2" gutterBottom className={classes.labelSliders}>
+            {/* <Typography variant="subtitle2" gutterBottom className={classes.labelSliders}>
                 Recorte de dados temporais: {value[0] + " - " + value[1]}
-            </Typography>
-            <Slider
+            </Typography> */}
+            {/* <Slider
                 getAriaLabel={() => 'Time range'}
                 value={value}
                 onChange={handleChange}
@@ -139,11 +162,28 @@ function ActionsContent() {
                 size="small"
                 min={2010}
                 max={2017}
-            />
+            /> */}
+            <LocalizationProvider dateAdapter={AdapterDateFns}  locale={ptBR} utils={DateFnsUtils}>
+                <DatePicker
+                    className={classes.datePicker}
+                    label="Recorte de dados temporais"
+                    openTo="year"
+                    views={['year', 'month', 'day']}
+                    minDate={new Date('2010-01-02')}
+                    maxDate={new Date('2017-12-31')}
+                    mask={'__/__/____'}
+                    value={value}
+                    onChange={(newValue) => {
+                        setValue(newValue);
+                    }}
+                    renderInput={(params) => <TextField {...params} className={classes.datePicker}/>}
+                />
+            </LocalizationProvider>
             <Typography variant="subtitle2" gutterBottom className={classes.labelSliders}>
                 Percentual de Treinamento: {valuePercent + "%"}
             </Typography>
             <Slider
+                className={classes.sliders}
                 getAriaLabel={() => 'Train percent'}
                 value={valuePercent}
                 onChange={handleChangePercent}
@@ -218,6 +258,7 @@ function ActionsContent() {
                 Números de dias para previsão: {valueForecast}
             </Typography>
             <Slider
+                className={classes.sliders}
                 getAriaLabel={() => 'Forecast days'}
                 value={valueForecast}
                 onChange={handleChangeForecast}
