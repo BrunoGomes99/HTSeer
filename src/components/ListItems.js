@@ -48,7 +48,7 @@ export default function ListItems() {
     <>
           <List aria-label="link pages">
             <ListItemLink to="home" primary="Home" icon={<HomeIcon />} />
-            <ListItemLink to="inputData" primary="Novo modelo preditivo" icon={<AddCircleOutlineIcon />} />
+            <ListItemLink to="inputData" primary="Novo modelo de previsões" icon={<AddCircleOutlineIcon />} />
             <ListItemLink to="modeling" primary="Visualizar previsões" icon={<BarChartIcon />} />
             <ListItemLink to="report" primary="Criar Relatório" icon={<EditIcon />} />
           </List>
