@@ -23,6 +23,7 @@ export default function InputData() {
                 flexDirection: 'column',
                 height: 440,
               }}
+              elevation= {4}
             >
               <TreeChart />
             </Paper>
