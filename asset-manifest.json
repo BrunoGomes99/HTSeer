@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/HTSeer/static/css/main.5739ad41.chunk.css",
-    "main.js": "/HTSeer/static/js/main.0cf2e22c.chunk.js",
-    "main.js.map": "/HTSeer/static/js/main.0cf2e22c.chunk.js.map",
+    "main.js": "/HTSeer/static/js/main.f32e1ffb.chunk.js",
+    "main.js.map": "/HTSeer/static/js/main.f32e1ffb.chunk.js.map",
     "runtime-main.js": "/HTSeer/static/js/runtime-main.04263e83.js",
     "runtime-main.js.map": "/HTSeer/static/js/runtime-main.04263e83.js.map",
-    "static/js/2.41299ee3.chunk.js": "/HTSeer/static/js/2.41299ee3.chunk.js",
-    "static/js/2.41299ee3.chunk.js.map": "/HTSeer/static/js/2.41299ee3.chunk.js.map",
+    "static/js/2.e15a2316.chunk.js": "/HTSeer/static/js/2.e15a2316.chunk.js",
+    "static/js/2.e15a2316.chunk.js.map": "/HTSeer/static/js/2.e15a2316.chunk.js.map",
     "index.html": "/HTSeer/index.html",
     "static/css/main.5739ad41.chunk.css.map": "/HTSeer/static/css/main.5739ad41.chunk.css.map",
-    "static/js/2.41299ee3.chunk.js.LICENSE.txt": "/HTSeer/static/js/2.41299ee3.chunk.js.LICENSE.txt"
+    "static/js/2.e15a2316.chunk.js.LICENSE.txt": "/HTSeer/static/js/2.e15a2316.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.04263e83.js",
-    "static/js/2.41299ee3.chunk.js",
+    "static/js/2.e15a2316.chunk.js",
     "static/css/main.5739ad41.chunk.css",
-    "static/js/main.0cf2e22c.chunk.js"
+    "static/js/main.f32e1ffb.chunk.js"
   ]
 }
