@@ -11,10 +11,10 @@ import InboxIcon from '@mui/icons-material/Inbox';
 import DraftsIcon from '@mui/icons-material/Drafts';
 import Typography from '@mui/material/Typography';
 import { Link as RouterLink, Route, MemoryRouter } from 'react-router-dom';
-import HomeIcon from '@mui/icons-material/Home';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import BarChartIcon from '@mui/icons-material/BarChart';
-import EditIcon from '@mui/icons-material/Edit';
+import InsertChartIcon from '@mui/icons-material/InsertChart';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import DescriptionIcon from '@mui/icons-material/Description';
 
 function ListItemLink(props) {
   const { icon, primary, to } = props;
@@ -43,14 +43,16 @@ ListItemLink.propTypes = {
   to: PropTypes.string.isRequired,
 };
 
-export default function ListItems() {
+export default function ListItems(props) {
+  console.log(props);
+  // const { pathname } = props.location;
   return (
     <>
           <List aria-label="link pages">
-            <ListItemLink to="home" primary="Home" icon={<HomeIcon />} />
+            <ListItemLink to="home" primary="Home" icon={<DashboardIcon />} />
             <ListItemLink to="inputData" primary="Novo modelo de previsões" icon={<AddCircleOutlineIcon />} />
-            <ListItemLink to="modeling" primary="Visualizar previsões" icon={<BarChartIcon />} />
-            <ListItemLink to="report" primary="Criar Relatório" icon={<EditIcon />} />
+            <ListItemLink to="modeling" primary="Visualizar previsões" icon={<InsertChartIcon />} />
+            <ListItemLink to="report" primary="Criar Relatório" icon={<DescriptionIcon />} />
           </List>
      </>
   );

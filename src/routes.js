@@ -5,10 +5,12 @@ import InputData from "./pages/InputData";
 import Modeling from "./pages/Modeling";
 import Report from "./pages/Report";
 
+export const DashboardPage = '/';
+
 const RoutesHtseer = () => {
    return(
        <Routes>
-          <Route element={ <Home/>} path = "/" />
+          <Route element={ <Home/>} path = {DashboardPage} />
           <Route element={ <Home/>} path = "HTSeer" />
           <Route element = { <Home /> }  path="home" />
           <Route element = { <InputData /> }  path="inputData" />
