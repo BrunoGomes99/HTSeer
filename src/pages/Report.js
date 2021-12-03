@@ -5,6 +5,7 @@ import {
 } from '@mui/material';
 import TreeChart from '../components/TreeChart';
 import LineChart from '../components/LineChart';
+import LineChart2 from '../components/LineChart2';
 import BarChart from '../components/BarChart';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
@@ -145,7 +146,8 @@ export default function Report() {
                             elevation={4}
                         >
                             <LineChart />
-                            <LineChart />
+                            <LineChart2 />
+                            <LineChart2 />
 
                         </Paper>
                     </Grid>
