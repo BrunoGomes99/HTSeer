@@ -23,12 +23,19 @@ const columns = [
 
 export default function Home(){
     return (
-        <div style={{ height: 400, width: '100%' }}>
+        <div style={{ 
+          height: '280px',          
+          position:'relative',
+          background: '#FFFFFF',
+          borderRadius: '0.8rem',               
+          marginTop: '-12rem',
+          padding: '0.1rem 2rem 7rem 2rem',
+          }}>
         <h2>Análises</h2>
         <DataGrid
           rows={rows}
           columns={columns}
-          pageSize={5}
+          pageSize={1}
           rowsPerPageOptions={[5]}
           checkboxSelection
         />
