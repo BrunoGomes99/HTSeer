@@ -1,5 +1,7 @@
 import React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+import { Pagination } from '@mui/material';
+
 
 const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
@@ -24,7 +26,7 @@ const columns = [
 export default function Home(){
     return (
         <div style={{ 
-          height: '280px',          
+          height: '680px',          
           position:'relative',
           background: '#FFFFFF',
           borderRadius: '0.8rem',               
@@ -35,7 +37,7 @@ export default function Home(){
         <DataGrid
           rows={rows}
           columns={columns}
-          pageSize={1}
+          pageSize={8}
           rowsPerPageOptions={[5]}
           checkboxSelection
         />

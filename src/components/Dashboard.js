@@ -18,6 +18,15 @@ import RoutesHtseer from '../routes';
 import { DataGrid } from '@mui/x-data-grid';
 import backgroundImg from '../images/BACKGROUND TOPO.png';
 import imgLogo from '../images/LOGO.png';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import AnalyticsIcon from '@mui/icons-material/Analytics';
+import InsightsIcon from '@mui/icons-material/Insights';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import Grid from '@mui/material/Grid';
+
 
 function Copyright(props) {
   return (
@@ -80,6 +89,85 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 const mdTheme = createTheme();
 
+const bull = (
+  <Box
+    component="span"
+    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+  >
+    •
+  </Box>
+);
+
+const cardAnalisesAbertas = (
+  <React.Fragment>
+    <CardContent>
+      <Typography sx={{ fontSize: 16 }} color="text.secondary" gutterBottom>
+        Análises em Aberto
+      </Typography>
+    <Grid container sx={{ color: 'text.primary' }}>
+      <Grid item xs={9.6}>
+        <Typography variant="h5" component="div">
+        234
+        </Typography>
+      </Grid>
+      <Grid>
+        <AnalyticsIcon fontSize="large"/>
+      </Grid>
+    </Grid>
+      <Typography sx={{ mb: 1.5 }} color="text.secondary">
+        25 Lojas
+      </Typography>
+  
+    </CardContent>
+  </React.Fragment>
+);
+const cardAnalisesAndamento = (
+  <React.Fragment>
+    <CardContent>
+      <Typography sx={{ fontSize: 16 }} color="text.secondary" gutterBottom>
+        Análises em Andamento
+      </Typography>
+    <Grid container sx={{ color: 'text.primary' }}>
+      <Grid item xs={9.6}>
+        <Typography variant="h5" component="div">
+        120
+        </Typography>
+      </Grid>
+      <Grid>
+        <InsightsIcon fontSize="large"/>
+      </Grid>
+    </Grid>
+      <Typography sx={{ mb: 1.5 }} color="text.secondary">
+        5 Lojas
+      </Typography>
+  
+    </CardContent>
+  </React.Fragment>
+);
+const cardAnalisesFinalizadas = (
+  <React.Fragment>
+    <CardContent>
+      <Typography sx={{ fontSize: 16 }} color="text.secondary" gutterBottom>
+        Análises Finalizadas
+      </Typography>
+    <Grid container sx={{ color: 'text.primary' }}>
+      <Grid item xs={9.6}>
+        <Typography variant="h5" component="div">
+        15
+        </Typography>
+      </Grid>
+      <Grid>
+        <CheckCircleOutlineIcon fontSize="large" />
+      </Grid>
+    </Grid>
+      <Typography sx={{ mb: 1.5 }} color="text.secondary">
+        15 Lojas
+      </Typography>
+  
+    </CardContent>
+  </React.Fragment>
+);
+
 function DashboardContent() {
   const [open, setOpen] = React.useState(false);
   const toggleDrawer = () => {
@@ -124,6 +212,15 @@ function DashboardContent() {
             <img src={backgroundImg} style={{width: '100%', height: '45vh'}}/>  
             <div style={{position: 'absolute', top:'70px', left:'25px'}}>
               <img src={imgLogo} />
+              <Box sx={{ minWidth: 180, position: 'relative', left:'775px', bottom: '150px' }}>
+                <Card variant="outlined">{cardAnalisesAbertas}</Card>
+              </Box>
+              <Box sx={{ minWidth: 180, position: 'relative', left:'1000px', bottom:'300px' }}>
+                <Card variant="outlined">{cardAnalisesAndamento}</Card>
+              </Box>
+              <Box sx={{ minWidth: 180, position: 'relative', left:'1225px', bottom:'450px' }}>
+                <Card variant="outlined">{cardAnalisesFinalizadas}</Card>
+              </Box>
             </div>
           </div>
           <Toolbar />
