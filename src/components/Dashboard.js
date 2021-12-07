@@ -26,7 +26,12 @@ import AnalyticsIcon from '@mui/icons-material/Analytics';
 import InsightsIcon from '@mui/icons-material/Insights';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import Grid from '@mui/material/Grid';
-
+import { ReactComponent as IconAnalisesAbertas } from '../images/ico_analises abertas.svg';
+import { ReactComponent as IconAnalisesAndamento } from '../images/ico_analises andamento.svg';
+import { ReactComponent as IconAnalisesFinalizadas } from '../images/ico_analises finalizadas.svg';
+import { ReactComponent as IconResumo } from '../images/ico_resumo.svg';
+import { ReactComponent as IconWallmart } from '../images/logo_walmart.svg';
+import CustomizedInputBase from './CustomizedInputBase';
 
 function Copyright(props) {
   return (
@@ -99,24 +104,24 @@ const bull = (
 );
 
 const cardAnalisesAbertas = (
-  <React.Fragment>
+  <React.Fragment >
     <CardContent>
       <Typography sx={{ fontSize: 16 }} color="text.secondary" gutterBottom>
         Análises em Aberto
       </Typography>
     <Grid container sx={{ color: 'text.primary' }}>
       <Grid item xs={9.6}>
-        <Typography variant="h5" component="div">
-        234
+        <Typography variant="h5" component="div" sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+          234
+          <IconAnalisesAbertas/>
         </Typography>
       </Grid>
-      <Grid>
-        <AnalyticsIcon fontSize="large"/>
+      <Grid item xs={9.6}>
+        <Typography sx={{ mb: 1.5}} color="text.secondary">        
+          <text style={{color: 'red'}}>25</text> Lojas
+        </Typography>
       </Grid>
     </Grid>
-      <Typography sx={{ mb: 1.5 }} color="text.secondary">
-        25 Lojas
-      </Typography>
   
     </CardContent>
   </React.Fragment>
@@ -128,18 +133,18 @@ const cardAnalisesAndamento = (
         Análises em Andamento
       </Typography>
     <Grid container sx={{ color: 'text.primary' }}>
-      <Grid item xs={9.6}>
-        <Typography variant="h5" component="div">
-        120
+      <Grid item xs={12}>
+        <Typography variant="h5" component="div" sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+          120
+          <IconAnalisesAndamento/>
         </Typography>
       </Grid>
-      <Grid>
-        <InsightsIcon fontSize="large"/>
+      <Grid item xs={9.6}>
+        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+          <text style={{color: 'darkorange'}}>5</text> Lojas
+        </Typography>
       </Grid>
     </Grid>
-      <Typography sx={{ mb: 1.5 }} color="text.secondary">
-        5 Lojas
-      </Typography>
   
     </CardContent>
   </React.Fragment>
@@ -151,18 +156,42 @@ const cardAnalisesFinalizadas = (
         Análises Finalizadas
       </Typography>
     <Grid container sx={{ color: 'text.primary' }}>
-      <Grid item xs={9.6}>
-        <Typography variant="h5" component="div">
-        15
+      <Grid item xs={10}>
+        <Typography variant="h5" component="div" sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+          15
+          <IconAnalisesFinalizadas/>
         </Typography>
       </Grid>
-      <Grid>
-        <CheckCircleOutlineIcon fontSize="large" />
+      <Grid item sx={9.6}>
+        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+          <text style={{color: 'mediumseagreen'}}>15</text> Lojas
+        </Typography>
       </Grid>
     </Grid>
-      <Typography sx={{ mb: 1.5 }} color="text.secondary">
-        15 Lojas
+  
+    </CardContent>
+  </React.Fragment>
+);
+
+const cardResumoPorEstado = (
+  <React.Fragment>
+    <CardContent style={{height: '147px'}}>
+      <Typography sx={{ fontSize: 16 }} color="text.secondary" gutterBottom>
+        Resumo por Estado
       </Typography>
+    <Grid container sx={{ color: 'text.primary' }}>
+      <Grid item xs={10}>
+        <Typography component="div" sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+          CA
+          <IconResumo/>
+          </Typography>
+      </Grid>
+      <Grid item sx={9.6} style={{minInlineSize: '-webkit-fill-available'}}>
+        <Typography sx={{ mb: 1.5 }}  variant="h5">
+          13
+        </Typography>
+      </Grid>
+    </Grid>
   
     </CardContent>
   </React.Fragment>
@@ -209,17 +238,26 @@ function DashboardContent() {
           }}
         >
           <div style={{position: 'relative'}}>
-            <img src={backgroundImg} style={{width: '100%', height: '45vh'}}/>  
-            <div style={{position: 'absolute', top:'70px', left:'25px'}}>
+            <img src={backgroundImg} style={{width: '100%', height: '45vh'}}/>
+            <div style={{position: 'absolute', top:'5px', left:'25px', display: 'flex', alignItems: 'center'}}>
+              <CustomizedInputBase/>
+              <div style={{position: 'relative', left:'980px'}}>
+                <IconWallmart/>
+              </div>
+            </div>
+            <div style={{position: 'absolute', top:'90px', left:'25px'}}>
               <img src={imgLogo} />
-              <Box sx={{ minWidth: 180, position: 'relative', left:'775px', bottom: '150px' }}>
+              <Box sx={{ minWidth: 180, position: 'relative', left:'550px', bottom: '150px' }}>
                 <Card variant="outlined">{cardAnalisesAbertas}</Card>
               </Box>
-              <Box sx={{ minWidth: 180, position: 'relative', left:'1000px', bottom:'300px' }}>
+              <Box sx={{ minWidth: 180, position: 'relative', left:'775px', bottom:'300px' }}>
                 <Card variant="outlined">{cardAnalisesAndamento}</Card>
               </Box>
-              <Box sx={{ minWidth: 180, position: 'relative', left:'1225px', bottom:'450px' }}>
+              <Box sx={{ minWidth: 180, position: 'relative', left:'1000px', bottom:'450px' }}>
                 <Card variant="outlined">{cardAnalisesFinalizadas}</Card>
+              </Box>
+              <Box sx={{ minWidth: 180, position: 'relative', left:'1225px', bottom:'600px' }}>
+                <Card variant="outlined">{cardResumoPorEstado}</Card>
               </Box>
             </div>
           </div>
