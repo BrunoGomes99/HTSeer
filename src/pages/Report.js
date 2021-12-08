@@ -6,6 +6,7 @@ import {
 import TreeChart from '../components/TreeChart';
 import LineChart from '../components/LineChart';
 import LineChart2 from '../components/LineChart2';
+import LineChart3 from '../components/LineChart3';
 import BarChart from '../components/BarChart';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
@@ -145,8 +146,7 @@ export default function Report() {
                             }}
                             elevation={4}
                         >
-                            <LineChart />
-                            <LineChart2 />
+                            <LineChart3 />
                             <LineChart2 />
 
                         </Paper>
