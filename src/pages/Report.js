@@ -8,6 +8,7 @@ import LineChart from '../components/LineChart';
 import LineChart2 from '../components/LineChart2';
 import LineChart3 from '../components/LineChart3';
 import BarChart from '../components/BarChart';
+import BarChartLabel from '../components/BarChartLabel';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 const reconciliation = [
@@ -146,8 +147,9 @@ export default function Report() {
                             }}
                             elevation={4}
                         >
-                            <LineChart3 />
-                            <LineChart2 />
+                            <LineChart3 />                            
+                            {/* <LineChart />
+                            <LineChart2 /> */}
 
                         </Paper>
                     </Grid>
@@ -164,7 +166,7 @@ export default function Report() {
                 >
                     <Typography style={{ marginBottom: "15px" }}>Comparação entre métricas e modelos</Typography>
                     <Grid container spacing={3} maxWidth="lg" direction={"row"}>
-                        <Grid item xs={12} md={5} lg={4}>
+                        {/* <Grid item xs={12} md={5} lg={4}>
 
                             <Paper
                                 sx={{
@@ -189,9 +191,9 @@ export default function Report() {
                                     </RadioGroup>
                                 </FormControl>
                             </Paper>
-                        </Grid>
-                        <Grid item xs={12} md={7} lg={8}>
-                            <BarChart />
+                        </Grid> */}
+                        <Grid item xs={12} md={12} lg={12}>
+                            <BarChartLabel />
                         </Grid>
                     </Grid>
                 </Paper>
