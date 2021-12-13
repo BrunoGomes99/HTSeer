@@ -209,7 +209,7 @@ export default function Report() {
                     {/* <Typography style={{ marginBottom: "15px" }}>Comparação entre métricas e modelos</Typography> */}
                     <Grid container spacing={3} maxWidth="lg" direction={"row"}>
                         <Grid item xs={12}>
-                            <Typography>Modelos Selecionados</Typography>
+                            <Typography style={{color: "#686868"}}>MODELOS SELECIONADOS</Typography>
                             <Divider />
                             <TableContainer sx={{ maxHeight: 440 }}>
                                 <Table stickyHeader aria-label="sticky table">
@@ -219,7 +219,7 @@ export default function Report() {
                                                 <TableCell
                                                     key={column.id}
                                                     align={column.align}
-                                                    style={{ minWidth: column.minWidth }}
+                                                    style={{ minWidth: column.minWidth, fontWeight:"bold" }}
                                                 >
                                                     {column.label}
                                                 </TableCell>
