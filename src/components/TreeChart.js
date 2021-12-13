@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import ReactEcharts from 'echarts-for-react';
 //import data from './data/states_hierarchy.json'
 //import data from './data/states.json'
-import data from './data/walmart.json'
+// import data from './data/walmart.json'
+import data from './data/hierarquia_nova.json'
 
 class TreeChart extends Component {
     render() {
@@ -10,8 +11,32 @@ class TreeChart extends Component {
             <ReactEcharts
                 option={{
                     tooltip: {
-                        trigger: 'item',
-                        triggerOn: 'mousemove'
+                        trigger: [data].name,
+                        formatter: function (params) {
+                            if (params.data.nomes.length == 1) {
+                              return `<b>${params.data.nomes[0]}</b>: ${params.data.value[0]}`;
+                            } else if (params.data.nomes.length == 2) {
+                              return `<b>${params.data.nomes[0]}</b>: ${params.data.value[0]}</br>
+                                   <b>${params.data.nomes[1]}</b>: ${params.data.value[1]}`;
+                            } else if (params.data.nomes.length == 3) {
+                              return `<b>${params.data.nomes[0]}</b>: ${params.data.value[0]}</br>
+                                   <b>${params.data.nomes[1]}</b>: ${params.data.value[1]}</br>
+                                   <b>${params.data.nomes[2]}</b>: ${params.data.value[2]}</br>`;
+                            } else if (params.data.nomes.length == 4) {
+                              return `<b>${params.data.nomes[0]}</b>: ${params.data.value[0]}</br>
+                                   <b>${params.data.nomes[1]}</b>: ${params.data.value[1]}</br>
+                                   <b>${params.data.nomes[2]}</b>: ${params.data.value[2]}</br>
+                                   <b>${params.data.nomes[3]}</b>: ${params.data.value[3]}</br>`;
+                            }
+                              else {
+                              return `<b>${params.data.nomes[0]}</b>: ${params.data.value[0]}</br>
+                                   <b>${params.data.nomes[1]}</b>: ${params.data.value[1]}</br>
+                                   <b>${params.data.nomes[2]}</b>: ${params.data.value[2]}</br>
+                                   <b>${params.data.nomes[3]}</b>: ${params.data.value[3]}</br>
+                                   <b>${params.data.nomes[4]}</b>: ${params.data.value[4]}</br>`;
+                            }
+                          }
+                        // triggerOn: 'mousemove'
                     },
                     series: [
                         {

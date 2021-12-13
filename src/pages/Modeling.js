@@ -1,7 +1,24 @@
 import React from 'react';
-import { Container, Grid, Paper, Typography, Button } from '@mui/material';
+import { Container, Grid, Paper, Typography, Divider, TableContainer, Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material';
 import ActionsModeling from '../components/ActionsModeling';
-import TreeChart from '../components/TreeChart';
+
+const columns = [
+    { id: 'modeloTecnica', label: 'Modelo/Técnica',  align: 'left' },
+    { id: 'autoArima', label: 'Auto-Arima', align: 'left' },
+    { id: 'amortecimento', label: 'Amortecimento Exponencial', align: 'left' },
+    { id: 'prophet', label: 'Prophet', align: 'left' },
+];
+
+function createData(modeloTecnica, autoArima, amortecimento, prophet) {
+    return { modeloTecnica, autoArima, amortecimento, prophet };
+}
+
+const rows = [
+    createData('OLS', 0.96, 0.96, 0.96),
+    createData('SWLS', 0.89, 0.89, 0.85),
+    createData('FP', 0.96, 0.96, 0.89),
+    createData('BU', 0.96, 0.96, 0.85),
+];
 
 export default function Modeling() {
     return (
@@ -17,7 +34,7 @@ export default function Modeling() {
                             display: 'flex',
                             flexDirection: 'column',
                         }}
-                        elevation= {4}
+                        elevation={4}
                     >
                         <Grid item xs={8} md={4} lg={4}>
                             <Typography>Métricas de Avaliação</Typography>
@@ -27,8 +44,55 @@ export default function Modeling() {
                                 Ver modelos ajustados
                             </Button>
                         </Grid> */}
-                    </Paper> 
-                    </Grid>
+                        <Grid container spacing={3} maxWidth="lg" direction={"row"} style={{marginTop: "15px"}}>
+                            <Grid item xs={12}>
+                                <Typography style={{color: "#686868"}}>RMSE</Typography>
+                                <Divider />
+                                <TableContainer sx={{ maxHeight: 440 }}>
+                                    <Table stickyHeader aria-label="sticky table">
+                                        <TableHead>
+                                            <TableRow>
+                                                {columns.map((column) => (
+                                                    <TableCell
+                                                        key={column.id}
+                                                        align={column.align}
+                                                        style={{ minWidth: column.minWidth, fontWeight: "bold", color: column.id === "modeloTecnica" ? "#006298" : "#000"}}
+                                                    >
+                                                        {column.label}
+                                                    </TableCell>
+                                                ))}
+                                            </TableRow>
+                                        </TableHead>
+                                        <TableBody>
+                                            {rows
+                                                // .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                                                .map((row) => {
+                                                    return (
+                                                        <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
+                                                            {columns.map((column) => {
+                                                                const value = row[column.id];
+                                                                console.log(column.format)
+                                                                return (
+                                                                    <TableCell key={column.id} align={column.align} style={{fontWeight: column.id === "modeloTecnica" ?  "bold" : "" }}>
+                                                                        {column.format && typeof value === 'number'
+                                                                            ? column.format(value)
+                                                                            : value}
+                                                                        
+                                                                    </TableCell>
+                                                                );
+                                                            })}
+                                                        </TableRow>
+                                                    );
+                                                })}
+                                        </TableBody>
+                                    </Table>
+                                </TableContainer>
+
+
+                            </Grid>
+                        </Grid>
+                    </Paper>
+                </Grid>
             </Grid>
         </Container>
     )

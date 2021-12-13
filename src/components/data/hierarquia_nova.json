@@ -1,0 +1,172 @@
+{
+    "name":"Walmart",
+    "nomes":[
+       "ESTADOS",
+       "LOJAS",
+       "DEPARTAMENTOS",
+       "PRODUTOS"
+    ],
+    "value":[
+       4,
+       10,
+       200,
+       350
+    ],
+    "children":[
+       {
+          "name":"ESTADO A",
+          "nomes":[
+             "LOJAS",
+             "DEPARTAMENTOS",
+             "PRODUTOS"
+          ],
+          "value":[
+             10,
+             200,
+             350
+          ],
+          "children":[
+             {
+                "name":"LOJA A",
+                "nomes":[
+                   "DEPARTAMENTOS",
+                   "PRODUTOS"
+                ],
+                "value":[
+                   200,
+                   350
+                ],
+                "children":[
+                   {
+                      "name":"DEPARTAMENTO A",
+                      "nomes":[
+                         "PRODUTOS"
+                      ],
+                      "value":[
+                         721
+                      ]
+                   },
+                   {
+                      "name":"DEPARTAMENTO A",
+                      "nomes":[
+                         "PRODUTOS"
+                      ],
+                      "value":[
+                         500
+                      ]
+                   }
+                ]
+             },
+             {
+                "name":"LOJA B",
+                "nomes":[
+                   "DEPARTAMENTOS",
+                   "PRODUTOS"
+                ],
+                "value":[
+                   200,
+                   350
+                ],
+                "children":[
+                   {
+                      "name":"DEPARTAMENTO A",
+                      "nomes":[
+                         "PRODUTOS"
+                      ],
+                      "value":[
+                         721
+                      ]
+                   },
+                   {
+                      "name":"DEPARTAMENTO A",
+                      "nomes":[
+                         "PRODUTOS"
+                      ],
+                      "value":[
+                         500
+                      ]
+                   }
+                ]
+             }
+          ]
+       },
+       {
+          "name":"ESTADO B",
+          "nomes":[
+             "LOJAS",
+             "DEPARTAMENTOS",
+             "PRODUTOS"
+          ],
+          "value":[
+             10,
+             200,
+             350
+          ],
+          "children":[
+             {
+                "name":"LOJA A",
+                "nomes":[
+                   "DEPARTAMENTOS",
+                   "PRODUTOS"
+                ],
+                "value":[
+                   200,
+                   350
+                ],
+                "children":[
+                   {
+                      "name":"DEPARTAMENTO A",
+                      "nomes":[
+                         "PRODUTOS"
+                      ],
+                      "value":[
+                         721
+                      ]
+                   },
+                   {
+                      "name":"DEPARTAMENTO A",
+                      "nomes":[
+                         "PRODUTOS"
+                      ],
+                      "value":[
+                         500
+                      ]
+                   }
+                ]
+             },
+             {
+                "name":"LOJA B",
+                "nomes":[
+                   "DEPARTAMENTOS",
+                   "PRODUTOS"
+                ],
+                "value":[
+                   200,
+                   350
+                ],
+                "children":[
+                   {
+                      "name":"DEPARTAMENTO A",
+                      "nomes":[
+                         "PRODUTOS"
+                      ],
+                      "value":[
+                         721
+                      ]
+                   },
+                   {
+                      "name":"DEPARTAMENTO A",
+                      "nomes":[
+                         "PRODUTOS"
+                      ],
+                      "value":[
+                         500
+                      ]
+                   }
+                ]
+             }
+          ]
+       }
+    ]
+ }
+ 

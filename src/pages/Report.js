@@ -8,6 +8,7 @@ import LineChart from '../components/LineChart';
 import LineChart2 from '../components/LineChart2';
 import LineChart3 from '../components/LineChart3';
 import BarChart from '../components/BarChart';
+import BarChartLabel from '../components/BarChartLabel';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import datalc from '../components/data/data_lineChart.json'
 
@@ -181,7 +182,7 @@ export default function Report() {
                 >
                     <Typography style={{ marginBottom: "15px" }}>Comparação entre métricas e modelos</Typography>
                     <Grid container spacing={3} maxWidth="lg" direction={"row"}>
-                        <Grid item xs={12} md={5} lg={4}>
+                        {/* <Grid item xs={12} md={5} lg={4}>
 
                             <Paper
                                 sx={{
@@ -206,9 +207,9 @@ export default function Report() {
                                     </RadioGroup>
                                 </FormControl>
                             </Paper>
-                        </Grid>
-                        <Grid item xs={12} md={7} lg={8}>
-                            <BarChart />
+                        </Grid> */}
+                        <Grid item xs={12} md={12} lg={12}>
+                            <BarChartLabel />
                         </Grid>
                     </Grid>
                 </Paper>
@@ -224,7 +225,7 @@ export default function Report() {
                     {/* <Typography style={{ marginBottom: "15px" }}>Comparação entre métricas e modelos</Typography> */}
                     <Grid container spacing={3} maxWidth="lg" direction={"row"}>
                         <Grid item xs={12}>
-                            <Typography>Modelos Selecionados</Typography>
+                            <Typography style={{color: "#686868"}}>MODELOS SELECIONADOS</Typography>
                             <Divider />
                             <TableContainer sx={{ maxHeight: 440 }}>
                                 <Table stickyHeader aria-label="sticky table">
@@ -234,7 +235,7 @@ export default function Report() {
                                                 <TableCell
                                                     key={column.id}
                                                     align={column.align}
-                                                    style={{ minWidth: column.minWidth }}
+                                                    style={{ minWidth: column.minWidth, fontWeight:"bold" }}
                                                 >
                                                     {column.label}
                                                 </TableCell>
