@@ -10,6 +10,7 @@ import LineChart3 from '../components/LineChart3';
 import BarChart from '../components/BarChart';
 import BarChartLabel from '../components/BarChartLabel';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import datalc from '../components/data/data_lineChart.json'
 
 const reconciliation = [
     'Ordinary Least Squares',
@@ -96,7 +97,20 @@ export default function Report() {
     const handleChangeErrorMetrics = (event, valueErrorMetrics) => {
         setValueErrorMetrics(valueErrorMetrics)
     };
-
+//para pegar as lojas
+    const stores = datalc.nivel
+    const recorte = datalc.recorte        
+    const storeList = stores.map(function(item){
+            return (
+                <LineChart3 
+                    nomeloja={item.name}
+                    valuesloja={item.values}
+                    recorte={recorte}
+                />                                   
+            )           
+        }
+        );
+//
 
     return (
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
@@ -147,9 +161,11 @@ export default function Report() {
                             }}
                             elevation={4}
                         >
-                            <LineChart3 />                            
-                            {/* <LineChart />
+                            {/* <LineChart3 />
                             <LineChart2 /> */}
+                            {
+                                storeList
+                            }
 
                         </Paper>
                     </Grid>

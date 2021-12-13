@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import ReactEcharts from 'echarts-for-react';
-import data_x from './data/data_x.json'
-import data_lc from './data/data_lineChart.json'
+//import data_x from './data/data_x.json'
+//import data_lc from './data/data_lineChart.json'
 
 
 class LineChart3 extends Component {
-
+    constructor (props){
+        super(props)
+    }
     render() {
-        const colors = ['#5470C6', '#EE6666','#07ffe2'];
-        const models = data_lc.nivel[0].values        
-        const modelList = models.map(function(item){
+        const colors = ['#5470C6', '#EE6666','#07ffe2','#8bff07'];
+        //const models = data_lc.nivel[0].values        
+        //const modelList = models.map(function(item){
+        const modelList = this.props.valuesloja.map(function(item){
             return {
                         
                 name: item[0],//'AutoArima',//data_lc.nivel[0].values[0].previsao[0].keys,//
@@ -36,7 +39,7 @@ class LineChart3 extends Component {
 
                     title: {
                         left: 'left',
-                        text: data_lc.nivel[0].name//'Predições loja CA_1' //titulo
+                        text: this.props.nomeloja//data_lc.nivel[1].name//'Predições loja CA_1' //titulo
                     },
                     legend: {
                         orient: 'vertical',
@@ -85,7 +88,7 @@ class LineChart3 extends Component {
                             //         }
                             //     }
                             // },
-                            data: data_lc.recorte//data_x.datax1 //['2016-1', '2016-2', '2016-3', '2016-4', '2016-5', '2016-6', '2016-7', '2016-8', '2016-9', '2016-10', '2016-11', '2016-12']
+                            data: this.props.recorte//data_lc.recorte//data_x.datax1 //['2016-1', '2016-2', '2016-3', '2016-4', '2016-5', '2016-6', '2016-7', '2016-8', '2016-9', '2016-10', '2016-11', '2016-12']
                         },
                         // {
                         //     type: 'category',
