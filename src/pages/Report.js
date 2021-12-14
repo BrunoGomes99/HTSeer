@@ -175,7 +175,7 @@ export default function Report() {
                     }}
                     elevation={4}
                 >
-                    <Typography style={{ marginBottom: "15px" }}>Comparação entre métricas e modelos</Typography>
+                    <Typography style={{ marginBottom: "15px" }}>Comparação entre métricas, modelos e técnicas</Typography>
                     <Grid container spacing={3} maxWidth="lg" direction={"row"}>
                         {/* <Grid item xs={12} md={5} lg={4}>
 

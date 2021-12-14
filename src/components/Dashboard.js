@@ -36,12 +36,7 @@ import CustomizedInputBase from './CustomizedInputBase';
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
+      HTSeer: Sistema de Previsão de Séries Temporais Hierárquicas | Versão: 0.01 | Cooperação tecnológica com ExACTa/PUC-Rio
     </Typography>
   );
 }
@@ -241,22 +236,22 @@ function DashboardContent() {
             <img src={backgroundImg} style={{width: '100%', height: '45vh'}}/>
             <div style={{position: 'absolute', top:'5px', left:'25px', display: 'flex', alignItems: 'center'}}>
               <CustomizedInputBase/>
-              <div style={{position: 'relative', left:'980px'}}>
+              <div style={{position: 'relative', left:'900px'}}>
                 <IconWallmart/>
               </div>
             </div>
             <div style={{position: 'absolute', top:'90px', left:'25px'}}>
-              <img src={imgLogo} />
-              <Box sx={{ minWidth: 180, position: 'relative', left:'550px', bottom: '150px' }}>
+              <img src={imgLogo}/>
+              <Box sx={{ minWidth: 180, position: 'relative', left:'530px', bottom: '150px' }}>
                 <Card variant="outlined">{cardAnalisesAbertas}</Card>
               </Box>
-              <Box sx={{ minWidth: 180, position: 'relative', left:'775px', bottom:'300px' }}>
+              <Box sx={{ minWidth: 180, position: 'relative', left:'755px', bottom:'300px' }}>
                 <Card variant="outlined">{cardAnalisesAndamento}</Card>
               </Box>
-              <Box sx={{ minWidth: 180, position: 'relative', left:'1000px', bottom:'450px' }}>
+              <Box sx={{ minWidth: 180, position: 'relative', left:'980px', bottom:'450px' }}>
                 <Card variant="outlined">{cardAnalisesFinalizadas}</Card>
               </Box>
-              <Box sx={{ minWidth: 180, position: 'relative', left:'1225px', bottom:'600px' }}>
+              <Box sx={{ minWidth: 180, position: 'relative', left:'1200px', bottom:'600px' }}>
                 <Card variant="outlined">{cardResumoPorEstado}</Card>
               </Box>
             </div>

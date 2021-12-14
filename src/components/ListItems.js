@@ -10,7 +10,7 @@ import Divider from '@mui/material/Divider';
 import InboxIcon from '@mui/icons-material/Inbox';
 import DraftsIcon from '@mui/icons-material/Drafts';
 import Typography from '@mui/material/Typography';
-import { Link as RouterLink, Route, MemoryRouter } from 'react-router-dom';
+import { NavLink as RouterLink, Route, MemoryRouter } from 'react-router-dom';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import InsertChartIcon from '@mui/icons-material/InsertChart';
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -22,7 +22,7 @@ function ListItemLink(props) {
   const renderLink = React.useMemo(
     () =>
       React.forwardRef(function Link(itemProps, ref) {
-        return <RouterLink to={to} ref={ref} {...itemProps} role={undefined} />;
+        return <RouterLink to={to} ref={ref} {...itemProps} />;
       }),
     [to],
   );
@@ -30,7 +30,7 @@ function ListItemLink(props) {
   return (
     <li>
       <ListItem button component={renderLink}>
-        {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
+        {icon ? <ListItemIcon sx={{color: "#006298"}}>{icon}</ListItemIcon> : null}
         <ListItemText primary={primary} />
       </ListItem>
     </li>
@@ -44,12 +44,12 @@ ListItemLink.propTypes = {
 };
 
 export default function ListItems(props) {
-  console.log(props);
+  console.log("props", props);
   // const { pathname } = props.location;
   return (
     <>
           <List aria-label="link pages">
-            <ListItemLink to="home" primary="Home" icon={<DashboardIcon />} />
+            <ListItemLink to="home" primary="Home"  icon={<DashboardIcon />} />
             <ListItemLink to="inputData" primary="Novo modelo de previsões" icon={<AddCircleOutlineIcon />} />
             <ListItemLink to="modeling" primary="Visualizar previsões" icon={<InsertChartIcon />} />
             <ListItemLink to="report" primary="Criar Relatório" icon={<DescriptionIcon />} />
