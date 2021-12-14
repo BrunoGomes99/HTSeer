@@ -4,13 +4,17 @@ import {
     TableBody, TableRow, TableCell, TableContainer, Table, TableHead, Divider, Button, Container
 } from '@mui/material';
 import TreeChart from '../components/TreeChart';
-import LineChart from '../components/LineChart';
-import LineChart2 from '../components/LineChart2';
 import LineChart3 from '../components/LineChart3';
 import BarChart from '../components/BarChart';
 import BarChartLabel from '../components/BarChartLabel';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import datalc from '../components/data/data_lineChart.json'
+//import makeStyles from '@mui/core/styles'; //novo
+//import datalc from '../components/data/data_lineChart.json'
+//import datalc from '../components/data/result2.json'
+//import datalc from '../components/data/new_result.json'
+import datalc from '../components/data/new_result_ca_tx.json'
+import { ClassNames } from '@emotion/react';
+
 
 const reconciliation = [
     'Ordinary Least Squares',
@@ -102,11 +106,13 @@ export default function Report() {
     const recorte = datalc.recorte        
     const storeList = stores.map(function(item){
             return (
+                //<div style={{weight:300,height:450}}> 
                 <LineChart3 
                     nomeloja={item.name}
                     valuesloja={item.values}
                     recorte={recorte}
-                />                                   
+                /> 
+                //</div>                                  
             )           
         }
         );
