@@ -9,7 +9,6 @@ import BarChart from '../components/BarChart';
 import BarChartLabelRMSE from '../components/BarChartLabelRMSE';
 import BarChartLabelMAPE from '../components/BarChartLabelMAPE';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-<<<<<<< HEAD
 //import makeStyles from '@mui/core/styles'; //novo
 //import datalc from '../components/data/data_lineChart.json'
 //import datalc from '../components/data/result2.json'
@@ -17,10 +16,6 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import datalc from '../components/data/new_result_ca_tx.json'
 import { ClassNames } from '@emotion/react';
 
-=======
-import datalc from '../components/data/data_lineChart.json';
-// import barJson from '../components/data/grafBarError.json';
->>>>>>> c7a2ca3b0c682fe8e8e9e9a348cbdacc864147de
 
 const reconciliation = [
     'Ordinary Least Squares',
