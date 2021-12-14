@@ -18,7 +18,7 @@ class LineChart3 extends Component {
                 name: item[0],//'AutoArima',//data_lc.nivel[0].values[0].previsao[0].keys,//
                 type: 'line',
                 lineStyle: {
-                        type: (item[0]=="Historico") ? 'continuous':'dashed'
+                        type: (item[0]=="Historico" || item[0]=='historico') ? 'continuous':'dashed'
                     },
                 smooth: true,
                 emphasis: {
@@ -35,16 +35,18 @@ class LineChart3 extends Component {
             <ReactEcharts
                 
                 option={{
-                    color: colors,
+                    //color: colors,
 
                     title: {
                         left: 'left',
                         text: this.props.nomeloja//data_lc.nivel[1].name//'Predições loja CA_1' //titulo
                     },
                     legend: {
-                        orient: 'vertical',
-                        right: 10,
-                        top: 50//'top'
+                        orient: 'horizontal',//'horizontal' ,//'vertical',
+                        //right: 0,
+                        top: 'bottom',//280,//50//'top','bottom'
+                        textStyle: {fontSize:10}
+                        //height: 20
                     },
                     tooltip: {
                         trigger: 'axis'
@@ -52,8 +54,8 @@ class LineChart3 extends Component {
                     
                     toolbox: {
                         left: 'center',
-                        itemSize: 15,
-                        top: 20,
+                        itemSize: 10,
+                        top: 20,                        
                         feature: {
                           dataZoom: {
                             yAxisIndex: 'none'
@@ -63,7 +65,7 @@ class LineChart3 extends Component {
                     },
                     grid: {
                         top: 50,
-                        bottom: 50
+                        bottom: 70
                     },
                     xAxis: //[
                         {

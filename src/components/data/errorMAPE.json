@@ -1,5 +1,5 @@
 {
-    "name": "RMSE",
+    "name": "MAPE",
     "values": {
         "OLS": [
             4099724257445703.5
