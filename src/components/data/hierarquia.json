@@ -1,0 +1,118 @@
+{
+  "name": "Walmart",
+  "nomes": ["ESTADOS", "LOJAS", "DEPARTAMENTOS", "PRODUTOS"],
+  "value": [3, 10, 3, 3049],
+  "children": [
+    {
+      "name": "CA",
+      "nomes": ["LOJAS", "DEPARTAMENTOS", "PRODUTOS"],
+      "value": [4, 3, 3049],
+      "children": [
+        { "name": "CA_1",
+          "nomes": ["DEPARTAMENTOS", "PRODUTOS"],
+          "value": [3, 3049],
+          "children": [
+            { "name": "FOODS", "nomes": ["PRODUTOS"], "value": [1437]},
+            { "name": "HOBBIES", "nomes": ["PRODUTOS"], "value": [565]},
+            { "name": "HOUSEHOLD", "nomes": ["PRODUTOS"], "value": [1047]}
+          ]
+        },
+        { "name": "CA_2",
+          "nomes": ["DEPARTAMENTOS", "PRODUTOS"],
+          "value": [3, 3049],
+          "children": [
+            { "name": "FOODS", "nomes": ["PRODUTOS"], "value": [1437]},
+            { "name": "HOBBIES", "nomes": ["PRODUTOS"], "value": [565]},
+            { "name": "HOUSEHOLD", "nomes": ["PRODUTOS"], "value": [1047]}
+          ]
+        },
+        { "name": "CA_3",
+          "nomes": ["DEPARTAMENTOS", "PRODUTOS"],
+          "value": [3, 3049],
+          "children": [
+            { "name": "FOODS", "nomes": ["PRODUTOS"], "value": [1437]},
+            { "name": "HOBBIES", "nomes": ["PRODUTOS"], "value": [565]},
+            { "name": "HOUSEHOLD", "nomes": ["PRODUTOS"], "value": [1047]}
+          ]
+        },
+        { "name": "CA_4",
+          "nomes": ["DEPARTAMENTOS", "PRODUTOS"],
+          "value": [3, 3049],
+          "children": [
+            { "name": "FOODS", "nomes": ["PRODUTOS"], "value": [1437]},
+            { "name": "HOBBIES", "nomes": ["PRODUTOS"], "value": [565]},
+            { "name": "HOUSEHOLD", "nomes": ["PRODUTOS"], "value": [1047]}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TX",
+      "nomes": ["LOJAS", "DEPARTAMENTOS", "PRODUTOS"],
+      "value": [3, 3, 3049],
+      "children": [
+        { "name": "TX_1",
+          "nomes": ["DEPARTAMENTOS", "PRODUTOS"],
+          "value": [3, 3049],
+          "children": [
+            { "name": "FOODS", "nomes": ["PRODUTOS"], "value": [1437]},
+            { "name": "HOBBIES", "nomes": ["PRODUTOS"], "value": [565]},
+            { "name": "HOUSEHOLD", "nomes": ["PRODUTOS"], "value": [1047]}
+          ]
+        },
+        { "name": "TX_2",
+          "nomes": ["DEPARTAMENTOS", "PRODUTOS"],
+          "value": [3, 3049],
+          "children": [
+            { "name": "FOODS", "nomes": ["PRODUTOS"], "value": [1437]},
+            { "name": "HOBBIES", "nomes": ["PRODUTOS"], "value": [565]},
+            { "name": "HOUSEHOLD", "nomes": ["PRODUTOS"], "value": [1047]}
+          ]
+        },
+        { "name": "TX_3",
+          "nomes": ["DEPARTAMENTOS", "PRODUTOS"],
+          "value": [3, 3049],
+          "children": [
+            { "name": "FOODS", "nomes": ["PRODUTOS"], "value": [1437]},
+            { "name": "HOBBIES", "nomes": ["PRODUTOS"], "value": [565]},
+            { "name": "HOUSEHOLD", "nomes": ["PRODUTOS"], "value": [1047]}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "WI",
+      "nomes": ["LOJAS", "DEPARTAMENTOS", "PRODUTOS"],
+      "value": [3, 3, 3049],
+      "children": [
+        { "name": "WI_1",
+          "nomes": ["DEPARTAMENTOS", "PRODUTOS"],
+          "value": [3, 3049],
+          "children": [
+            { "name": "FOODS", "nomes": ["PRODUTOS"], "value": [1437]},
+            { "name": "HOBBIES", "nomes": ["PRODUTOS"], "value": [565]},
+            { "name": "HOUSEHOLD", "nomes": ["PRODUTOS"], "value": [1047]}
+          ]
+        },
+        { "name": "WI_2",
+          "nomes": ["DEPARTAMENTOS", "PRODUTOS"],
+          "value": [3, 3049],
+          "children": [
+            { "name": "FOODS", "nomes": ["PRODUTOS"], "value": [1437]},
+            { "name": "HOBBIES", "nomes": ["PRODUTOS"], "value": [565]},
+            { "name": "HOUSEHOLD", "nomes": ["PRODUTOS"], "value": [1047]}
+          ]
+        },
+        { "name": "WI_3",
+          "nomes": ["DEPARTAMENTOS", "PRODUTOS"],
+          "value": [3, 3049],
+          "children": [
+            { "name": "FOODS", "nomes": ["PRODUTOS"], "value": [1437]},
+            { "name": "HOBBIES", "nomes": ["PRODUTOS"], "value": [565]},
+            { "name": "HOUSEHOLD", "nomes": ["PRODUTOS"], "value": [1047]}
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -3,7 +3,8 @@ import ReactEcharts from 'echarts-for-react';
 //import data from './data/states_hierarchy.json'
 //import data from './data/states.json'
 // import data from './data/walmart.json'
-import data from './data/hierarquia_nova.json'
+// import data from './data/hierarquia_nova.json'
+import data from './data/hierarquia.json'
 
 class TreeChart extends Component {
     render() {
